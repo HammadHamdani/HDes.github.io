@@ -1,0 +1,659 @@
+/*_______________________________	Universal Properties	________________________________*/
+:root{
+	margin: 0; padding: 0; box-sizing: border-box;
+	--orange: #fca311;
+	--darkblue: #14213d;
+	--black: #000;
+	--platinum: #e5e5e5;
+}
+
+*, *::before,*::after{ box-sizing: border-box; box-sizing: border-box;}
+
+body{ margin: 0; padding: 0; }
+
+h1,h2,h3,h4,h5,h6,p{ font-family: sans-serif; color: var(--darkblue); text-transform: uppercase;}
+
+p{ font-family: serif; text-transform: none; letter-spacing: 0;}
+
+a{
+	display: block;
+	text-decoration: none;	
+	font-family: sans-serif;
+	font-size: 15px;
+	text-align: center;
+}
+
+.container{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: minmax(650px , 90vh) max-content 130px;
+}
+
+/*_____________ Header Section Strats Here___________________ */
+
+.header--sec{
+	display: block;	
+	background-image: linear-gradient(to top left, rgba(0,0,0, 0.3), rgba(0, 0, 0, 0.6)), url("../images/header-img2.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0;
+	width: 100%;
+	height: inherit;
+	overflow: hidden;
+	position: relative;
+
+}	
+
+/* _________ Navigation Section Starts___________*/
+
+.nav--sec{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding-inline: 50px;
+	width: -webkit-fill-available;
+	height: 60px;
+	background: transparent;
+}
+
+.logo{ width: 72px; height: 72px; }
+
+.nav{ display: flex; flex-direction: row; align-items: center; justify-content: center;}
+
+.nav li{ list-style: none; position: relative;	}
+
+.nav li::before{
+	content: "";
+	display: block;
+	width: 0%;
+	height: 2px;
+	background: var(--darkblue);
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%); 
+	transition: width 0.25s ease-in;	
+}
+
+.nav li:hover::before{ width: 30%; }
+
+.nav li>a{
+	width: max-content;
+	padding: 5px 5px;
+	margin: 0 15px;
+	font-family: serif;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	color: #fff;
+	transition: color 0.2s linear;
+}
+
+.nav li>a:focus { color: var(--orange); }
+
+/*_______________ Sign up Button Starts Here _______________*/
+
+.signup--btn{
+	color: var(--orange);
+	background-color: #fff;
+	border: 2px solid var(--darkblue);
+	border-radius: 30px;
+	width: 130px;
+	padding: 10px 15px ;
+	font-size: 1.0rem;
+	font-weight: 600;
+	transition: background 0.2s linear, color 0.2s linear, transform 0.05s linear;
+}
+
+.signup--btn:hover{ background: var(--darkblue); box-shadow: 1px 1px 10px rgba(0,0,0,0.4); }
+
+.signup--btn:active{ transform: scale(0.97); box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);}
+
+/*______ Sign up Button Ends Here ____________*/
+
+/* _________ Navigation Section Ends___________*/
+
+/* _________ Hero Text Starts Here ___________*/
+
+
+.hero--txt{
+	position: absolute;
+	width: 100%;
+	font-family: ;
+	color: var(--black);
+	top: 25%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.hero--txt>img{ 
+	display: block; 
+	width: 200px;
+	height: 200px; 
+	filter: brightness(1.1); 
+	border-style: solid;
+	border-color: var(--orange);
+	border-width: 4px;
+	border-radius: 100%; 
+	box-shadow: 3px 3px 20px #00000070;
+	margin-bottom: 30px;
+}
+
+.hero--h1{
+	width: max-content;
+	color: var(--orange);
+	font-size: 3rem;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	word-spacing: 5px;
+	margin: 0;
+}
+
+.hero--p{ 
+	width: max-content;
+	font-size: 1rem;
+	margin-block-start: -2px;
+	margin: 0;
+	color: var(--platinum);
+}
+
+/* _________ Hero Text Starts Here ___________*/
+
+/* _________ Hero Buttons Starts Here ___________*/
+
+.hero--btn--sec{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: max-content;
+	height: max-content;
+}
+
+.hero--btn{
+	border-style: solid;
+	border-radius: 35px;
+	border-color: var(--darkblue);
+	border-width: 2px;
+	width: 130px;
+	font-weight: 600;
+	padding: 10px 15px;
+	margin-top: 10px;
+	transition: background 0.2s linear;
+}
+
+.hero--btn:hover;{ box-shadow: 3px 3px 10px rgba(0,0,0,0.4); }
+
+.hire--btn{ background: var(--darkblue); color: var(--orange); }
+
+.hire--btn:hover{ background: #fff; color: var(--darkblue); }
+
+.cv--btn{ background: #fff; margin-left: 10px; color: var(--orange); }
+
+.cv--btn:hover{ background: var(--darkblue); color: var(--orange); }
+
+.hero--btn:active{ transform: translateY(2px); box-shadow: 0px 0px 6px rgba(0,0,0,0.4); }
+
+/* _________ Hero Buttons Ends Here ___________*/
+
+/*_____________ Header Section Ends Here___________________ */
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<### Content Section Starts Here ###>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+.content--sec{
+	display: flex;
+	flex-direction: column;
+	height: inherit;
+}
+
+/* _________ About--me Section Starts Here ___________*/
+
+.about--me{
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+	position: relative;
+	background: var(--orange);
+}
+
+.about--me--sub{
+    height: 360px;
+    overflow: hidden;
+    margin-inline: 25px;
+    overflow: hidden;
+}
+
+.about--pic--holder{
+	position: relative;
+    width: 400px;
+    box-shadow: 1px 1px 5px rgb(0 0 0 / 40%);
+    border: 5px var(--orange) solid;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.about--pic--holder>img{
+	position: absolute;
+	object-fit: cover;	
+	width: inherit;
+	height: inherit;
+}
+
+.about--txt--holder{ width: 550px;  padding: 5px 10px; }
+
+.about--txt--holder>h2{
+	color: var(--darkblue);
+	position: relative;
+	margin-top: 0px;
+}
+
+.about--txt--holder>h2::before{ 
+	content: "";
+	position: absolute;
+	width: 50px;
+	height: 3px;
+	background: var(--orange);
+	bottom: -3px;
+
+}
+
+.about--txt--holder p{
+	font-family: Arial;
+	color: var(--black);
+	text-align: justify;
+    width: 100%;
+    line-height: 1.5;
+}
+
+.about--info>p{ margin-block: 8px; }
+
+.about--info>p:last-of-type{ margin-bottom: 20px; }
+
+.about--info>p>span{ font-weight: 600; color: var(--black);}
+
+.about--txt--holder>a{ 
+	position: absolute;
+	background-color: var(--darkblue); 
+	padding: 10px 25px;
+	font-weight: 600; 
+	color: var(--orange);
+	border-radius: 20px;	
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);	
+	transition: transform 0.2s ease , background-color 0.2s ease ;
+}
+
+.about--txt--holder>a:hover{ background-color: var(--orange); color: var(--darkblue); box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);}
+.about--txt--holder>a:active{ transform: translateY(2px); box-shadow: 0px 0px 6px rgba(0,0,0,0.4); }
+
+/* _________ About--me Section Ends Here ___________*/
+
+/* ___________________________ MY Services Section Starts Here________________________________ */
+.services--sec{
+	width: 100%;
+	height: max-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	background: #fff;
+	color: #fff;
+	padding: 60px 0px;
+}
+
+.services--sec>h2{ position: relative; letter-spacing: 1px; margin: 0px 0px 5px 0px; color: var(--darkblue);}
+
+.services--sec>h2::before{ 
+	content: "";
+	position: absolute;
+	bottom: -3px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50px;
+	height: 3px;
+	background-color: var(--orange);
+}
+
+.card-serve-sec{
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+	height: max-content;
+}
+
+.cards{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	min-width: 250px;
+	width: 20%;
+	height: 290px;
+	border-radius: 10px;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.3);		
+	margin: 30px 30px;
+	padding: 0px 40px;
+	background: #fff;
+	transition: transform 0.15s linear,
+	box-shadow 0.15s linear;
+}
+
+.cards:hover{ transform: scale(1.04);  box-shadow: 1px 1px 20px rgba(0,0,0,0.3) , 1px 1px 20px rgba(0, 0, 0, 0.1); }
+
+.cards>img{ width: 70px; height: 70px; }
+
+.cards>h3,p{ text-align: center; }
+
+.cards>h3{
+	text-transform: uppercase;
+	font-size: 16px;
+	margin-bottom: 0px;
+	margin-top: 20px;
+}
+
+.cards>p{
+	font-size: 13px;
+	margin-bottom: 0px;	
+	text-align: justify;
+	text-align-last: center;
+	line-height: 1.3;
+}
+
+.cards>a{
+	display: none;
+	visibility: hidden;
+	width: 130px ;
+	height: max-content;
+	font-size: 14px;
+	font-weight: 600;
+	background: var(--darkblue);
+	color: var(--orange);
+	padding: 10px 8px;
+	border-radius: 20px;
+	margin-block: 15px;
+	transition: visibility 0.3s linear, transform 0.05s ease;
+}
+
+.cards:hover a{ display: block; visibility: visible; box-shadow: 1px 1px 5px #2d2c2e78; }
+
+.cards>a:active{ box-shadow: 1px 1px 3px #2d2c2e78; transform: scale(0.985);}
+
+/* ___________________________ MY Services Section Ends Here________________________________ */
+
+/* ___________________________ MY Skills Section Starts Here________________________________ */
+
+.skills--sec{
+	width: 100%;
+	height: max-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-block: 60px;
+	position: relative;
+	background: var(--platinum);
+}	
+
+
+.skills--sec>h2{ color: var(--darkblue); margin: 0; position: relative;}
+
+.skills--sec>h2::before{ 
+	content: "";
+	position: absolute;
+	bottom: -3px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50px;
+	height: 3px;
+	background: var(--orange);
+	margin-top: 30px;
+
+}
+
+.bars--container{ 
+	margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.bars--container>.bars{
+	margin: 20px 50px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 470px;
+}
+
+.bars>.bars--label{ font-size: 18px; font-weight: 600;}
+
+.bars>.bars--progress{
+	position: relative;
+	width: 300px;
+    height: 20px;
+    background-color: var(--platinum);
+    color: var(--darkblue);
+    border:  4px var(--darkblue) solid;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.bars>.bars--progress::before{
+	position: absolute;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+	font-size: 14px;
+	font-weight: 600;
+	margin-top: -3px;
+	background-color: var(--orange);
+	box-shadow: 0px 0px 18px var(--orange);
+	border-radius: inheri;
+}
+
+.bars>.bar--progress1::before{ content: "95%"; width: 95%; }
+
+.bars>.bar--progress2::before{ content: "85%"; width: 85%; }
+
+.bars>.bar--progress3::before{ content: "55%"; width: 55%; }
+
+.bars>.bar--progress4::before{ content: "80%"; width: 80%; }
+
+.bars>.bar--progress5::before{ content: "85%"; width: 85%; }
+
+.bars>.bar--progress6::before{ content: "90%"; width: 90%; }
+
+
+/* ___________________________ MY Skills Section Ends Here________________________________ */
+
+/*_________________________________________________________________________________________________________________________________*/
+
+/* ________________          Subscribe Section Starts Here ___________________ */
+
+.subs--sec{
+	position: relative;
+	width: 100%;
+	height: max-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 60px;
+}
+
+.subs--sec>h2{ color: var(--darkblue); margin: 0; position: relative;}
+
+.subs--sec>h2::before{ 
+	content: "";
+	position: absolute;
+	bottom: -3px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50px;
+	height: 3px;
+	background: var(--orange);
+	margin-top: 30px;
+}
+
+.sub--fld--btn{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 600px;
+	height: 60px;
+	border-radius: 60px;
+	overflow: hidden;
+	margin-top: 20px;
+	padding-inline: 40px 20px;
+}
+
+.sub--fld--btn>input{
+	border: 2px var(--darkblue) solid;
+	border-radius: 30px;
+	width:  400px;
+	height: 45px;	
+	padding-inline: 18px;
+	background: #fff;
+	color: var(--darkblue);
+	font-weight: 600;	
+}
+
+.sub--fld--btn>input:focus{ outline: var(--darkblue); }
+
+.sub--fld--btn>a{
+    display: block;
+    width: 150px;
+    height: 45px;
+    padding: 12px 20px;
+    margin-left: 10px;
+	background-color: var(--darkblue);
+    color: var(--orange);
+    border-radius: 30px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.2s linear;
+}	
+
+.sub--fld--btn>a:hover{ background-color: var(--orange); color: var(--darkblue);}
+
+.sub--fld--btn>a:active{ box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4); }
+
+/* ________________         Subscribe Section Ends Here _______________________ */
+
+/* _ */
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<###  Content Section Ends Here ###>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+/* ##################################### Footer Section Starts Here ############################################  */
+
+.footer--sec{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-image: linear-gradient(to top left, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.6)), url("../images/header-img2.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.footer--sec>.nav--sec>{ justify-content: center; flex-direction: row; padding-inline: 0;}
+.footer--sec>.nav--sec>.nav{ flex-direction: row; padding: 0;}
+
+/* ------------------------------------------------------------------------  */
+.footer--social--sec{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	border-top: solid;
+	border-top-color: white;
+	border-top-width: 1px;
+	padding: 10px 0px;
+	background: inherit;
+	width: -webkit-fill-available;
+
+}
+
+.footer--social--sec>span>a{ 
+	position: relative;
+	display: inline-block; width: 40px; height: 40px; 
+	margin-inline: 10px;
+	transition: transform 0.1s linear;
+}
+
+.social--icon1{ background-image: url("../icons/youtube.svg"); }
+
+.social--icon2{ background-image: url("../icons/facebook.svg"); }
+
+.social--icon3{ background-image: url("../icons/dribbble.svg"); }
+
+.social--icon4{ background-image: url("../icons/vimeo.svg"); }
+
+.social--icon5{ background-image: url("../icons/whatsapp.svg"); }
+
+.footer--social--sec>span>a:hover{ border: 2px var(--darkblue) solid; border-radius: 100%; padding: 10px; transform: scale(1.15); }    
+
+ /*##################################### Footer Section Ends Here ############################################  */
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!    Media Qaries !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+@media only screen and (max-width: 60px){
+
+	.nav--sec{ flex-direction: column; z-index: 111;}
+
+	.logo{ align-self: flex-start; }
+
+	.nav{ flex-direction: column; }
+
+	.nav li>a{ font-size: 18px; }
+
+	.about--me{
+		flex-direction: column;
+		height: max-content;
+		padding: 40px 0px;
+		
+	}
+
+	.about--txt--holder{ margin-top: 20px; font-size: 18px;}
+
+	.services--sec>h2{ margin-bottom: 35px; }
+
+	.card-serve-sec{ flex-direction: column; }
+
+	.cards{
+		width: 100%;
+		margin: 10px 0;
+		border-radius: 0;
+		box-shadow: none;
+
+	}
+
+
+
+}
+
+
+
+
